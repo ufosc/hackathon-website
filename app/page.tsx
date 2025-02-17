@@ -1,49 +1,40 @@
+"use client"
+
+import { Textfit } from "react-textfit"
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <img
-          src="https://i.imgur.com/fPS9mwv.png"
-          alt="Open Source Club logo"
-          width={180}
-        />
-        <p className="text-lg text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          OSC is hosting a hackathon!
-        </p>
-        <ol className="list-inside list-decimal text-sm text-left font-[family-name:var(--font-geist-mono)]">
-          <li>Medieval themed (possibly vampires?).</li>
-          <li>Aiming for April 5-6th. 24 hours.</li>
-          <li>We will have food.</li>
-          <li>Venue to be announced.</li>
-          <li>Follow socials, more info coming soon!</li>
-        </ol>
-        <div className="row-start-3 flex gap-6 flex-wrap items-center justify-center mt-10">
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://discord.com/invite/Gsxej6u"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Discord
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://www.instagram.com/uf_osc"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://ufosc.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Go to ufosc.org →
-          </a>
+    <div className="grid grid-cols-[1fr_4fr] gap-3 justify-end max-h-full h-full">
+      <div className="flex flex-col justify-between h-full mr-7">
+        <div>
+          <Textfit mode="single" max={100} className="text-center leading-none">
+            UF OPEN SOURCE CLUB PRESENTS
+          </Textfit>
+          <Textfit mode="single" max={200} className="text-center leading-none">
+            MINIHACK
+          </Textfit>
+          <p className="font-serif text-justify text-2xl my-7">
+            THE OPEN SOURCE CLUB’S MINIHACK IS AN OPPORTUNITY FOR
+            UNIVERSITY OF FLORIDA STUDENTS TO COLLABORATE ON BUILDING OPEN
+            SOURCE SOFTWARE OUTSIDE OF THE CLASSROOM. IT IS A 24H
+            HACKATHON WHERE STUDENTS FORM THEIR OWN GROUPS AND WORK TO
+            COMPLETE A SOFTWARE DEVELOPMENT CHALLENGE.
+          </p>
         </div>
-      </main>
+        <div>
+          <Textfit mode="single" max={100}>
+            2025.05.05 | Venue to be Announced
+          </Textfit>
+          <Textfit mode="single" max={100} className="font-serif">
+            THIS MESSAGE WAS BROUGHT TO YOU BY THE OSC DEPARTMENT OF
+            PROPAGANDA.
+          </Textfit>
+        </div>
+      </div>
+      <div className="flex justify-end pl-4 h-full">
+        { /* TODO Fix this overflowing image */ }
+        <img src="/nosferatu.png" className="h-full w-full object-contain"/>
+      </div>
     </div>
   )
 }

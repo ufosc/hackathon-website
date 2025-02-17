@@ -1,32 +1,45 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { ArrowUpRight } from "lucide-react"
+import Link from "next/link"
 import "./globals.css"
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
 
 export const metadata: Metadata = {
   title: "OSC Mini-Hackathon",
   description: "UF Open Source Club Hackathon 2025",
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children}:
+Readonly<{children: React.ReactNode}>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
+        <header className="flex sticky w-full content-center items-center gap-4 justify-end mb-5">
+          <Link className="flex flex-row items-center font-[Times]"
+            href="https://ufosc.org">
+            UFOSC.ORG
+            <ArrowUpRight/>
+          </Link>
+          <Link className="flex flex-row items-center font-[Times]"
+            href="https://ufosc.org/#get-in-touch">
+            CONTACT
+            <ArrowUpRight/>
+          </Link>
+          <Link className="flex flex-row items-center font-[Times]"
+            href="https://www.instagram.com/uf_osc">
+            INSTAGRAM
+            <ArrowUpRight/>
+          </Link>
+          <Link className="flex flex-row items-center font-[Times]"
+            href="https://discord.com/invite/Gsxej6u">
+            DISCORD
+            <ArrowUpRight/>
+          </Link>
+          <Link className="flex flex-row items-center font-[Times]"
+            href="https://ufosc.org">
+            SPONSOR PACKET
+            <ArrowUpRight/>
+          </Link>
+        </header>
         {children}
       </body>
     </html>
