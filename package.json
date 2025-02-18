@@ -9,7 +9,7 @@
     "lint": "next lint",
     "export": "next export",
     "deploy": "gh-pages -d out",
-    "build-and-deploy": "npm run build && npm run export && npm run deploy"
+    "build-and-deploy": "npm run build && npm run deploy"
   },
   "homepage": "https://ufosc.github.io/hackathon-website",
   "dependencies": {
