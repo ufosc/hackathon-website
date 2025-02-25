@@ -19,15 +19,11 @@ body {
     background: #F9FAFE;
     border: 1rem solid #1C2646;
     font-family: 'FOT Matisse Pro', Times;
-    height: 100vh;
-    width: 100vw;
-    padding: 4rem;
-    padding-top: 2rem;
 }
 
 @font-face {
     font-family: 'FOT Matisse Pro';
-    src: url('/fonts/FOT-Matisse-Pro-EB.otf');
+    src: url('/fonts/FOT-Matisse-Pro-EB.woff2');
     font-style: normal;
     font-display: swap;
 }
