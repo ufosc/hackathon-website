@@ -19,7 +19,7 @@ export default function Home() {
           <div className="mt-4 md:hidden flex justify-center overflow-hidden">
             <img src="/nosferatu.png" alt="Nosferatu" className="w-full object-cover"/>
           </div>
-          <Textfit mode="multi" max={999} className="font-serif text-center md:text-justify my-7">
+          <Textfit mode="multi" min={18} max={999} className="font-serif text-center md:text-justify my-7">
             THE OPEN SOURCE CLUB’S MINIHACK IS AN OPPORTUNITY FOR
             UNIVERSITY OF FLORIDA STUDENTS TO COLLABORATE ON BUILDING
             OPEN SOURCE SOFTWARE OUTSIDE OF THE CLASSROOM. IT IS A 24H
@@ -28,8 +28,8 @@ export default function Home() {
           </Textfit>
         </div>
         <div>
-          <Textfit mode="single" className="text-center">
-            2025.05.05 | VENUE TO BE ANNOUNCED
+          <Textfit mode="single" className="text-center font-bold">
+            ⚠️ POSTPONED UNTIL FURTHER NOTICE ⚠️
           </Textfit>
           <p className="font-serif text-xs text-center mt-2">
             THIS MESSAGE WAS BROUGHT TO YOU BY THE OSC DEPARTMENT OF
