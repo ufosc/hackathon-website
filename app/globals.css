@@ -23,7 +23,9 @@ body {
 
 @font-face {
     font-family: 'FOT Matisse Pro';
-    src: url('/fonts/FOT-Matisse-Pro-EB.woff2');
+    src: url('/fonts/FOT-Matisse-Pro-EB.woff2') format("woff2"),
+         url('/fonts/FOT-Matisse-Pro-EB.ttf') format('ttf'),
+         url('/fonts/FOT-Matisse-Pro-EB.otf') format('otf');
     font-style: normal;
     font-display: swap;
 }
