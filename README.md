@@ -1,13 +1,44 @@
-# hackathon-website
+<div align="center">
+<h1>hackathon-website</h1>
 
-⚠️ (VERY EARLY) WORK IN PROGRESS ⚠️
+<img src="https://github.com/user-attachments/assets/69302e62-b454-4a84-906e-3a176fa347f3" width="100%" height="90%" />
 
-We are building a website for a possible OSC hackathon.
+Website for the UF Open Source Club Minihack.
 
-A place for sponsors, attendees, etc. to find information that wont clutter up our main site.
+⚠️ Postponed to Fall 2025 ⚠️
+</div>
 
-Right now, we have a NextJS static site that basically says "check back soon". 
+## Install
+Clone the repository (requires [git](https://git-scm.com/)):
+```
+git clone https://github.com/ufosc/hackathon-website.git
+```
 
-I don't know who's getting involved so I havent had a chance to discuss a tech stack, but we'll probably roll with React.
+Navigate to the project directory and install the project dependencies (requires [Node.js](https://nodejs.org/en)):
+```
+cd hackathon-website
+npm install --force
+```
+## Usage
+<b>Starting the development server:</b>
+```
+npm run dev
+```
+You may access the website at http://localhost:3000
 
-If you're interested in helping, send a message on [discord](https://discord.com/invite/Gsxej6u)
+<b>Building for production:</b>
+```
+npm run build
+```
+
+<b>Publishing to GitHub Pages</b>
+
+To publish to GitHub pages, make sure that your account has permission to push directly to the repository's branches (i.e. you've been invited as a contributor). Then, run the following command to build and deploy the website:
+```
+npm run build-and-deploy
+```
+When the website is deployed, GitHub tends to automatically change the website's domain. If this occurs, navigate to `Settings > Pages` and set the custom domain to `hack.ufosc.org`.
+
+## License
+[AGPL-3.0-or-later](LICENSE) <br/>
+Copyright (C) 2025 Open Source Club
