@@ -17,7 +17,7 @@ export default function Home() {
           </Textfit>
           {/* Mobile image: shown only on mobile */}
           <div className="mt-4 md:hidden flex justify-center overflow-hidden">
-            <img src="/nosferatu.png" alt="Nosferatu" className="w-full object-cover"/>
+            <img src="/under-construction.gif" alt="Under Construction" className="w-full object-cover"/>
           </div>
           <Textfit mode="multi" min={18} max={999} className="font-serif text-center md:text-justify my-7">
             THE OPEN SOURCE CLUB’S MINIHACK IS AN OPPORTUNITY FOR
@@ -29,7 +29,7 @@ export default function Home() {
         </div>
         <div>
           <Textfit mode="single" className="text-center font-bold">
-            ⚠️ POSTPONED UNTIL FURTHER NOTICE ⚠️
+            September 27-28
           </Textfit>
           <p className="font-serif text-xs text-center mt-2">
             THIS MESSAGE WAS BROUGHT TO YOU BY THE OSC DEPARTMENT OF
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </div>
       <div className="hidden md:flex items-center justify-center overflow-hidden">
-        <img src="/nosferatu.png" alt="Nosferatu" className="w-full h-full object-cover"/>
+        <img src="/under-construction.gif" alt="Under Construction" className="w-full h-full object-cover"/>
       </div>
     </div>
   )
