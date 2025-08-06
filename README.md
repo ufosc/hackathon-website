@@ -1,11 +1,11 @@
 <div align="center">
 <h1>hackathon-website</h1>
 
-<img src="https://github.com/user-attachments/assets/69302e62-b454-4a84-906e-3a176fa347f3" width="100%" height="90%" />
+<!-- <img src="https://github.com/user-attachments/assets/69302e62-b454-4a84-906e-3a176fa347f3" width="100%" height="90%" /> -->
 
 Website for the UF Open Source Club Minihack.
 
-⚠️ Postponed to Fall 2025 ⚠️
+September 2025 
 </div>
 
 ## Install

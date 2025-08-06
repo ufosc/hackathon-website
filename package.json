@@ -14,7 +14,7 @@
   "homepage": "https://ufosc.github.io/hackathon-website",
   "dependencies": {
     "lucide-react": "^0.475.0",
-    "next": "15.1.6",
+    "next": "^15.4.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-textfit": "^1.1.1"
