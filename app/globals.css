@@ -14,6 +14,10 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: #1C2646;
     background: #F9FAFE;
