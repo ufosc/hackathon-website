@@ -14,10 +14,14 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    color: #1C2646;
-    background: #F9FAFE;
-    border: 1rem solid #1C2646;
+    color: #1e293b; /* Text */
+    background: #f9fafb; /* Main background */
+    border: none;
     font-family: 'FOT Matisse Pro', Times;
 }
 
@@ -30,8 +34,21 @@ body {
     font-display: swap;
 }
 
+@font-face {
+  font-family: 'DotGothic16';
+  src: url('/DotGothic16-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, button, .font-gothic {
+  font-family: 'DotGothic16', sans-serif !important;
+  letter-spacing: 0.5px;
+  color: #2563eb; /* Primary accent */
+}
+
 h2 {
     font-family: 'FOT Matisse Pro', Times;
     font-size: clamp(1rem, 2.38vi + 1.85rem, 3.75rem);
-    color: #1C2646;
+    color: #2563eb;
 }

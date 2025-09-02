@@ -11,7 +11,11 @@ export default function RootLayout({children}:
 Readonly<{children: React.ReactNode}>) {
   return (
     <html lang="en">
-      <body className="md:w-screen md:h-screen md:p-[4rem] md:pt-[2rem] pt-2">
+      <head>
+        {/* DotGothic16 font preload */}
+        <link rel="preload" href="/DotGothic16-Regular.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
+      </head>
+      <body className="bg-[#2a140c] text-[#f9fafe] font-sans min-h-screen">
         <Header />
         {children}
       </body>
