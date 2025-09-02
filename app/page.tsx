@@ -223,61 +223,87 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#18181b] text-[#f9fafb]">
       {/* Hero Section */}
-      <section id="about" className="min-h-screen flex items-center justify-center p-4 pt-2 md:pt-4">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-3 h-auto md:h-full md:max-h-full w-full">
-          <div className="flex flex-col justify-between md:mr-7">
-            <div>
-              <Textfit mode="single" max={999} className="text-center leading-none">
-                UF OPEN SOURCE CLUB PRESENTS
-              </Textfit>
-              <Textfit mode="single" max={999} className="text-center leading-none">
-                OSC MINIHACK
-              </Textfit>
-              {/* Mobile image: shown only on mobile */}
-              <div className="mt-4 md:hidden flex justify-center overflow-hidden">
-                <img src="/under-construction.gif" alt="Under Construction" className="w-full object-cover"/>
-              </div>
-              <Textfit mode="multi" min={18} max={999} className="font-serif text-center md:text-justify my-7">
-                THE OPEN SOURCE CLUB'S MINIHACK IS AN OPPORTUNITY FOR
-                UNIVERSITY OF FLORIDA STUDENTS TO COLLABORATE ON BUILDING
-                A MEANINGFUL AND IMPACTFUL PROJECT OUTSIDE OF THE CLASSROOM. IT IS A 24H
-                HACKATHON WHERE STUDENTS FORM THEIR OWN GROUPS AND WORK TO
-                COMPLETE A SOFTWARE DEVELOPMENT CHALLENGE.
-              </Textfit>
-            </div>
-
+      <section
+        id="about"
+        className="relative w-full min-h-screen flex items-center justify-center bg-[#2d1100] p-0 overflow-hidden"
+      >
+        <img
+          src="/minihack_hero.png"
+          alt="OSC Minihack Hero"
+          className="w-full h-full object-contain"
+          style={{ minHeight: "100vh", maxHeight: "100vh" }}
+          draggable={false}
+        />
+        {/* Overlay text and button in the blank area */}
+        <div
+          className="absolute flex flex-row items-center gap-6"
+          style={{
+            right: "8vw",
+            top: "55vh",
+            transform: "translateY(-50%)",
+          }}
+        >
+          <div className="flex flex-col text-right">
+            <h1
+              className="text-3xl md:text-5xl font-gothic mb-2"
+              style={{
+                color: "#2563eb",
+                fontFamily: '"DotGothic16", sans-serif',
+                textShadow: "2px 2px 0 #18181b",
+              }}
+            >
+              Choose your side.
+            </h1>
+            <h2
+              className="text-3xl md:text-5xl font-gothic mb-0"
+              style={{
+                color: "#ef4444",
+                fontFamily: '"DotGothic16", sans-serif',
+                textShadow: "2px 2px 0 #18181b",
+              }}
+            >
+              Code through the night.
+            </h2>
           </div>
-          <div className="hidden md:flex items-center justify-center overflow-hidden">
-            <img src="/under-construction.gif" alt="Under Construction" className="w-full h-full object-cover"/>
-          </div>
+          <a
+            href="#registration"
+            className="px-6 py-2 rounded-full bg-[#2563eb] !text-white text-xl font-gothic shadow hover:bg-[#fbbf24] hover:!text-[#23272a] transition-colors"
+            style={{
+              fontFamily: '"DotGothic16", sans-serif',
+              boxShadow: "2px 2px 0 #18181b",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Sign Up
+          </a>
         </div>
       </section>
 
       {/* Event Details Section */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[#18181b] text-[#f9fafb]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-center mb-12">Event Details</h2>
+          <h2 className="text-center mb-12 text-3xl font-gothic text-[#2563eb]">Event Details</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <Calendar className="w-12 h-12 mx-auto mb-4 text-[#1C2646]" />
-              <h3 className="font-bold mb-2">Date</h3>
+              <Calendar className="w-12 h-12 mx-auto mb-4 text-white" />
+              <h3 className="font-gothic text-xl mb-2 text-[#fbbf24]">Date</h3>
               <p>September 27th-28th,<br />10 AM - 10 AM</p>
             </div>
             <div className="text-center">
-              <MapPin className="w-12 h-12 mx-auto mb-4 text-[#1C2646]" />
-              <h3 className="font-bold mb-2">Location</h3>
+              <MapPin className="w-12 h-12 mx-auto mb-4 text-white" />
+              <h3 className="font-gothic text-xl mb-2 text-[#fbbf24]">Location</h3>
               <p>University of Florida,<br />Newell Hall</p>
             </div>
             <div className="text-center">
-              <Clock className="w-12 h-12 mx-auto mb-4 text-[#1C2646]" />
-              <h3 className="font-bold mb-2">Duration</h3>
+              <Clock className="w-12 h-12 mx-auto mb-4 text-white" />
+              <h3 className="font-gothic text-xl mb-2 text-[#fbbf24]">Duration</h3>
               <p>24 Hours</p>
             </div>
             <div className="text-center">
-              <Users className="w-12 h-12 mx-auto mb-4 text-[#1C2646]" />
-              <h3 className="font-bold mb-2">Participants</h3>
+              <Users className="w-12 h-12 mx-auto mb-4 text-white" />
+              <h3 className="font-gothic text-xl mb-2 text-[#fbbf24]">Participants</h3>
               <p>UF Students Only</p>
             </div>
           </div>
@@ -285,24 +311,24 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-16 px-4 bg-[#F9FAFE]">
+      <section id="faq" className="py-16 px-4 bg-[#23272a] text-[#f9fafb]">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-center mb-12">Frequently Asked Questions</h2>
+          <h2 className="text-center mb-12 text-3xl font-gothic text-[#2563eb]">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-sm">
+              <div key={index} className="bg-[#18181b] rounded-lg shadow-sm">
                 <button
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-[#2563eb] hover:text-[#fbbf24] transition-colors font-gothic"
                   onClick={() => setFaqOpen(faqOpen === index ? null : index)}
                 >
-                  <span className="font-medium">{faq.question}</span>
+                  <span className="font-gothic">{faq.question}</span>
                   <ChevronDown 
                     className={`w-5 h-5 transition-transform ${faqOpen === index ? 'rotate-180' : ''}`} 
                   />
                 </button>
                 {faqOpen === index && (
                   <div className="px-6 pb-4">
-                    <p className="text-gray-600">{faq.answer}</p>
+                    <p className="text-white">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -311,14 +337,14 @@ export default function Home() {
         </div>
       </section>
 
-{/* Registration Section */}
-<section id="registration" className="py-16 px-4 bg-white">
+      {/* Registration Section */}
+      <section id="registration" className="py-16 px-4 bg-[#18181b] text-[#f9fafb]">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-center mb-12">Register for Minihack</h2>
+          <h2 className="text-center mb-12 text-3xl font-gothic text-[#2563eb]">Register for Minihack</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">Full Name *</label>
+                <label htmlFor="name" className="block text-sm font-gothic mb-2 text-[#fbbf24]">Full Name *</label>
                 <input
                   type="text"
                   id="name"
@@ -327,11 +353,11 @@ export default function Home() {
                   maxLength={100}
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1C2646]"
+                  className="w-full px-3 py-2 border border-[#2563eb] rounded-md focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-[#18181b] text-[#f9fafb]"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">Email *</label>
+                <label htmlFor="email" className="block text-sm font-gothic mb-2 text-[#fbbf24]">Email *</label>
                 <input
                   type="email"
                   id="email"
@@ -341,14 +367,14 @@ export default function Home() {
                   title="Please enter a valid ufl.edu email address"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1C2646]"
+                  className="w-full px-3 py-2 border border-[#2563eb] rounded-md focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-[#18181b] text-[#f9fafb]"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="linkedinUrl" className="block text-sm font-medium mb-2">LinkedIn Profile (optional)</label>
+                <label htmlFor="linkedinUrl" className="block text-sm font-gothic mb-2 text-[#fbbf24]">LinkedIn Profile (optional)</label>
                 <input
                   type="url"
                   id="linkedinUrl"
@@ -356,11 +382,11 @@ export default function Home() {
                   placeholder="https://www.linkedin.com/in/your-handle"
                   value={formData.linkedinUrl}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1C2646]"
+                  className="w-full px-3 py-2 border border-[#2563eb] rounded-md focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-[#18181b] text-[#f9fafb]"
                 />
               </div>
               <div>
-                <label htmlFor="githubUrl" className="block text-sm font-medium mb-2">GitHub Profile (optional)</label>
+                <label htmlFor="githubUrl" className="block text-sm font-gothic mb-2 text-[#fbbf24]">GitHub Profile (optional)</label>
                 <input
                   type="url"
                   id="githubUrl"
@@ -368,21 +394,21 @@ export default function Home() {
                   placeholder="https://github.com/your-username"
                   value={formData.githubUrl}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1C2646]"
+                  className="w-full px-3 py-2 border border-[#2563eb] rounded-md focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-[#18181b] text-[#f9fafb]"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="year" className="block text-sm font-medium mb-2">Academic Year *</label>
+                <label htmlFor="year" className="block text-sm font-gothic mb-2 text-[#fbbf24]">Academic Year *</label>
                 <select
                   id="year"
                   name="year"
                   required
                   value={formData.year}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1C2646]"
+                  className="w-full px-3 py-2 border border-[#2563eb] rounded-md focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-[#18181b] text-[#f9fafb]"
                 >
                   <option value="">Select Year</option>
                   <option value="freshman">Freshman</option>
@@ -390,11 +416,10 @@ export default function Home() {
                   <option value="junior">Junior</option>
                   <option value="senior">Senior</option>
                   <option value="graduate">Graduate</option>
-
                 </select>
               </div>
               <div>
-                <label htmlFor="major" className="block text-sm font-medium mb-2">Major *</label>
+                <label htmlFor="major" className="block text-sm font-gothic mb-2 text-[#fbbf24]">Major *</label>
                 <input
                   type="text"
                   id="major"
@@ -403,20 +428,20 @@ export default function Home() {
                   maxLength={100}
                   value={formData.major}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1C2646]"
+                  className="w-full px-3 py-2 border border-[#2563eb] rounded-md focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-[#18181b] text-[#f9fafb]"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="experience" className="block text-sm font-medium mb-2">Programming Experience *</label>
+              <label htmlFor="experience" className="block text-sm font-gothic mb-2 text-[#fbbf24]">Programming Experience *</label>
               <select
                 id="experience"
                 name="experience"
                 required
                 value={formData.experience}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1C2646]"
+                className="w-full px-3 py-2 border border-[#2563eb] rounded-md focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-[#18181b] text-[#f9fafb]"
               >
                 <option value="">Select Experience Level</option>
                 <option value="beginner">Beginner (0-1 years)</option>
@@ -426,7 +451,7 @@ export default function Home() {
             </div>
 
             <div>
-              <label htmlFor="resume" className="block text-sm font-medium mb-2">Resume (PDF, max 5MB)</label>
+              <label htmlFor="resume" className="block text-sm font-gothic mb-2 text-[#fbbf24]">Resume (PDF, max 5MB)</label>
               <input
                 type="file"
                 id="resume"
@@ -438,7 +463,7 @@ export default function Home() {
             </div>
 
             <div>
-              <label htmlFor="dietaryRestrictions" className="block text-sm font-medium mb-2">Dietary Restrictions</label>
+              <label htmlFor="dietaryRestrictions" className="block text-sm font-gothic mb-2 text-[#fbbf24]">Dietary Restrictions</label>
               <textarea
                 id="dietaryRestrictions"
                 name="dietaryRestrictions"
@@ -446,17 +471,15 @@ export default function Home() {
                 onChange={handleInputChange}
                 rows={3}
                 maxLength={500}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1C2646]"
+                className="w-full px-3 py-2 border border-[#2563eb] rounded-md focus:outline-none focus:ring-2 focus:ring-[#2563eb] bg-[#18181b] text-[#f9fafb]"
                 placeholder="Please let us know about any dietary restrictions or allergies... (max 500 characters)"
               />
             </div>
 
-            
-
             <button
               type="submit"
               disabled={submitting}
-              className="w-full bg-[#1C2646] text-white py-3 px-6 rounded-md font-medium hover:bg-[#0f1a2e] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full bg-[#2563eb] !text-white py-3 px-6 rounded-md font-gothic text-xl hover:bg-[#fbbf24] hover:!text-[#23272a] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {submitting ? 'Submitting…' : 'Register'}
             </button>
@@ -464,12 +487,12 @@ export default function Home() {
         </div>
       </section>
 
- {/* Sponsors Section */}
- <section id="sponsors" className="py-16 px-4 bg-[#F9FAFE]">
+      {/* Sponsors Section */}
+      <section id="sponsors" className="py-16 px-4 bg-[#23272a] text-[#f9fafb]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-center mb-12">Our Sponsors</h2>
+          <h2 className="text-center mb-12 text-3xl font-gothic text-[#2563eb]">Our Sponsors</h2>
           <div className="text-center mb-8">
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg !text-white mb-8 font-gothic">
               Thank you to our amazing sponsors who are making the OSC Minihack possible!
             </p>
           </div>
@@ -478,7 +501,9 @@ export default function Home() {
           <div className="space-y-16">
             {/* Corporate Sponsors */}
             <div>
-              <h3 className="text-center text-2xl font-bold mb-8 text-gray-600">Corporate Sponsors</h3>
+              <h3 className="text-center text-2xl font-bold mb-8" style={{ color: "#FFD700" /* Gold */ }}>
+                Corporate Sponsors
+              </h3>
               <div className="flex flex-wrap justify-center items-center gap-12">
                 {/* Astera Labs Logo */}
                 <a 
@@ -512,7 +537,9 @@ export default function Home() {
 
             {/* Food Sponsors */}
             <div>
-              <h3 className="text-center text-xl font-bold mb-8 text-yellow-600">Food Sponsors</h3>
+              <h3 className="text-center text-xl font-bold mb-8" style={{ color: "#C0C0C0" /* Silver */ }}>
+                Food Sponsors
+              </h3>
               <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
                 <a href="https://www.celsius.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
                   <img src="/sponsors/logo-celsius.svg" alt="Celsius Logo" className="h-16 object-contain"/>
@@ -520,34 +547,36 @@ export default function Home() {
                 <a href="https://www.dominos.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
                   <img src="/sponsors/logo-dominos.svg" alt="Domino's Pizza Logo" className="h-16 object-contain"/>
                 </a>
-                <a href="https://www.piesanostogo.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
-                  <img src="/sponsors/piesanos-logo.svg" alt="Piesanos Stone Fired Pizza Logo" className="h-16 object-contain"/>
-                </a>
-                 <a href="https://www.publix.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
-                  <img src="/sponsors/publix-logo.svg" alt="Publix Logo" className="h-16 object-contain"/>
-                </a>
+                <div className="flex items-center justify-center h-16 px-4 font-gothic text-[#fbbf24] text-lg border border-dashed border-[#C0C0C0] rounded">
+                  Coming Soon
+                </div>
+                <div className="flex items-center justify-center h-16 px-4 font-gothic text-[#fbbf24] text-lg border border-dashed border-[#C0C0C0] rounded">
+                  Coming Soon
+                </div>
               </div>
             </div>
 
-            {/* Club Sponsors */}
+            {/* Club Collaborators */}
             <div>
-              <h3 className="text-center text-lg font-bold mb-8 text-gray-500">Club Sponsors</h3>
+              <h3 className="text-center text-lg font-bold mb-8" style={{ color: "#CD7F32" /* Bronze */ }}>
+                Club Sponsors
+              </h3>
               <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6">
-                 <a href="https://uf-acm.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
-                  <img src="/sponsors/uf-acm-logo.svg" alt="UF ACM Logo" className="h-12 object-contain"/>
-                </a>
-                 <a href="https://ufswe.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
-                  <img src="/sponsors/uf-swe-logo.svg" alt="UF Society of Women Engineers Logo" className="h-12 object-contain"/>
-                </a>
-                 <a href="https://gatortechuf.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
-                  <img src="/sponsors/gator-tech-logo.svg" alt="GatorTech Logo" className="h-12 object-contain"/>
-                </a>
-                 <a href="https://ufgdc.org/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
-                  <img src="/sponsors/uf-gdc-logo.svg" alt="UF Game Developers Coalition Logo" className="h-12 object-contain"/>
-                </a>
-                <a href="https://www.facebook.com/ieee.uf/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
-                  <img src="/sponsors/uf-ieee-logo.svg" alt="UF IEEE Logo" className="h-12 object-contain"/>
-                </a>
+                <div className="flex items-center justify-center h-12 px-4 font-gothic text-[#64748b] text-base border border-dashed border-[#CD7F32] rounded">
+                  To Be Announced
+                </div>
+                <div className="flex items-center justify-center h-12 px-4 font-gothic text-[#64748b] text-base border border-dashed border-[#CD7F32] rounded">
+                  To Be Announced
+                </div>
+                <div className="flex items-center justify-center h-12 px-4 font-gothic text-[#64748b] text-base border border-dashed border-[#CD7F32] rounded">
+                  To Be Announced
+                </div>
+                <div className="flex items-center justify-center h-12 px-4 font-gothic text-[#64748b] text-base border border-dashed border-[#CD7F32] rounded">
+                  To Be Announced
+                </div>
+                <div className="flex items-center justify-center h-12 px-4 font-gothic text-[#64748b] text-base border border-dashed border-[#CD7F32] rounded">
+                  To Be Announced
+                </div>
               </div>
             </div>
           </div>
@@ -559,8 +588,8 @@ export default function Home() {
       
 
       {/* Footer */}
-      <footer className="py-8 px-4 bg-[#1C2646] text-white text-center">
-        <p className="font-serif text-sm">
+      <footer className="py-8 px-4 bg-[#18181b] text-[#fbbf24] text-center font-gothic">
+        <p className="text-sm">
           THIS MESSAGE WAS BROUGHT TO YOU BY THE OSC DEPARTMENT OF PROPAGANDA.
         </p>
       </footer>
