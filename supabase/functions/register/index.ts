@@ -52,7 +52,7 @@ function validateAndSanitizeData(data: any): RegistrationData | { error: string 
   }
 
   // Validate enum fields
-  const validYears = ['freshman', 'sophomore', 'junior', 'senior']
+  const validYears = ['freshman', 'sophomore', 'junior', 'senior', 'graduate']
   const validExperience = ['beginner', 'intermediate', 'advanced']
   
   if (!validYears.includes(data.year)) {
@@ -91,7 +91,7 @@ async function checkRateLimit(supabase: any, ipAddress: string): Promise<boolean
     const { data, error } = await supabase.rpc('check_rate_limit', {
       p_ip_address: ipAddress,
       p_action: 'registration',
-      p_limit: 3,
+      p_limit: 500,
       p_window_minutes: 60
     })
     

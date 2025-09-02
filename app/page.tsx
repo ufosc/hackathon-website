@@ -27,16 +27,16 @@ export default function Home() {
 
   const faqs = [
     {
-      question: "What is Minihack?",
-      answer: "Minihack is a 24-hour hackathon organized by the UF Open Source Club. It's an opportunity for University of Florida students to collaborate on building open source software outside of the classroom."
+      question: "What is the OSC Minihack?",
+      answer: "The OSC Minihack is a 24-hour hackathon organized by the UF Open Source Club. It's an opportunity for University of Florida students to collaborate on building meaningful and impactful projects outside of the classroom."
     },
     {
       question: "Who can participate?",
-      answer: "Any University of Florida student can participate in Minihack. All skill levels are welcome, from beginners to experienced developers."
+      answer: "Any University of Florida student can participate in the OSC Minihack. All skill levels are welcome, from beginners to experienced developers."
     },
     {
       question: "Do I need to have a team?",
-      answer: "You can participate individually or form a team. We'll also have team formation activities at the beginning of the event to help you find teammates."
+      answer: "You do not! You can participate individually or form a team of up to four people."
     },
     {
       question: "What should I bring?",
@@ -44,11 +44,19 @@ export default function Home() {
     },
     {
       question: "Is there a cost to participate?",
-      answer: "Minihack is completely free to participate in! We'll provide food, drinks, and prizes for the winners."
+      answer: "The OSC Minihack is completely free to participate in! We'll provide food, drinks, and prizes for the winners."
+    },
+    {
+      question: "How do I register?",
+      answer: "You can register by filling out the form below and clicking the 'Register' button right bewlow the form."
     },
     {
       question: "What are the prizes?",
-      answer: "We'll have prizes for the top projects in different categories. More details about prizes will be announced closer to the event."
+      answer: "We'll have prizes for the top projects for the general prompt and the sponsor prompt. More details about prizes will be announced closer to the event."
+    },
+    {
+      question: "Where can I find more information?",
+      answer: "Join the Discord server to find more information and ask about anything else you'd like to know."
     }
   ]
 
@@ -225,7 +233,7 @@ export default function Home() {
                 UF OPEN SOURCE CLUB PRESENTS
               </Textfit>
               <Textfit mode="single" max={999} className="text-center leading-none">
-                MINIHACK
+                OSC MINIHACK
               </Textfit>
               {/* Mobile image: shown only on mobile */}
               <div className="mt-4 md:hidden flex justify-center overflow-hidden">
@@ -234,20 +242,12 @@ export default function Home() {
               <Textfit mode="multi" min={18} max={999} className="font-serif text-center md:text-justify my-7">
                 THE OPEN SOURCE CLUB'S MINIHACK IS AN OPPORTUNITY FOR
                 UNIVERSITY OF FLORIDA STUDENTS TO COLLABORATE ON BUILDING
-                OPEN SOURCE SOFTWARE OUTSIDE OF THE CLASSROOM. IT IS A 24H
+                A MEANINGFUL AND IMPACTFUL PROJECT OUTSIDE OF THE CLASSROOM. IT IS A 24H
                 HACKATHON WHERE STUDENTS FORM THEIR OWN GROUPS AND WORK TO
                 COMPLETE A SOFTWARE DEVELOPMENT CHALLENGE.
               </Textfit>
             </div>
-            <div>
-              <Textfit mode="single" className="text-center font-bold">
-                September 27-28
-              </Textfit>
-              <p className="font-serif text-xs text-center mt-2">
-                THIS MESSAGE WAS BROUGHT TO YOU BY THE OSC DEPARTMENT OF
-                PROPAGANDA.
-              </p>
-            </div>
+
           </div>
           <div className="hidden md:flex items-center justify-center overflow-hidden">
             <img src="/under-construction.gif" alt="Under Construction" className="w-full h-full object-cover"/>
@@ -263,12 +263,12 @@ export default function Home() {
             <div className="text-center">
               <Calendar className="w-12 h-12 mx-auto mb-4 text-[#1C2646]" />
               <h3 className="font-bold mb-2">Date</h3>
-              <p>September 27-28, 2024</p>
+              <p>September 27th-28th,<br />10 AM - 10 AM</p>
             </div>
             <div className="text-center">
               <MapPin className="w-12 h-12 mx-auto mb-4 text-[#1C2646]" />
               <h3 className="font-bold mb-2">Location</h3>
-              <p>University of Florida<br />Campus</p>
+              <p>University of Florida,<br />Newell Hall</p>
             </div>
             <div className="text-center">
               <Clock className="w-12 h-12 mx-auto mb-4 text-[#1C2646]" />
@@ -311,97 +311,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sponsors Section */}
-      <section id="sponsors" className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-center mb-12">Our Sponsors</h2>
-          <div className="text-center mb-8">
-            <p className="text-lg text-gray-600 mb-8">
-              Thank you to our amazing sponsors who make Minihack possible!
-            </p>
-          </div>
-          
-          {/* Sponsor Tiers */}
-          <div className="space-y-12">
-            {/* Platinum Sponsors */}
-            <div>
-              <h3 className="text-center text-xl font-bold mb-6 text-gray-500">PLATINUM SPONSORS</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center justify-items-center">
-                <div className="bg-gray-100 p-8 rounded-lg w-full max-w-xs h-32 flex items-center justify-center">
-                  <p className="text-gray-500 text-center">Your Company Here</p>
-                </div>
-                <div className="bg-gray-100 p-8 rounded-lg w-full max-w-xs h-32 flex items-center justify-center">
-                  <p className="text-gray-500 text-center">Your Company Here</p>
-                </div>
-                <div className="bg-gray-100 p-8 rounded-lg w-full max-w-xs h-32 flex items-center justify-center">
-                  <p className="text-gray-500 text-center">Your Company Here</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Gold Sponsors */}
-            <div>
-              <h3 className="text-center text-xl font-bold mb-6 text-yellow-600">GOLD SPONSORS</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center justify-items-center">
-                <div className="bg-gray-100 p-6 rounded-lg w-full max-w-xs h-24 flex items-center justify-center">
-                  <p className="text-gray-500 text-center text-sm">Your Company Here</p>
-                </div>
-                <div className="bg-gray-100 p-6 rounded-lg w-full max-w-xs h-24 flex items-center justify-center">
-                  <p className="text-gray-500 text-center text-sm">Your Company Here</p>
-                </div>
-                <div className="bg-gray-100 p-6 rounded-lg w-full max-w-xs h-24 flex items-center justify-center">
-                  <p className="text-gray-500 text-center text-sm">Your Company Here</p>
-                </div>
-                <div className="bg-gray-100 p-6 rounded-lg w-full max-w-xs h-24 flex items-center justify-center">
-                  <p className="text-gray-500 text-center text-sm">Your Company Here</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Silver Sponsors */}
-            <div>
-              <h3 className="text-center text-xl font-bold mb-6 text-gray-400">SILVER SPONSORS</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 items-center justify-items-center">
-                <div className="bg-gray-100 p-4 rounded-lg w-full max-w-xs h-20 flex items-center justify-center">
-                  <p className="text-gray-500 text-center text-xs">Your Company Here</p>
-                </div>
-                <div className="bg-gray-100 p-4 rounded-lg w-full max-w-xs h-20 flex items-center justify-center">
-                  <p className="text-gray-500 text-center text-xs">Your Company Here</p>
-                </div>
-                <div className="bg-gray-100 p-4 rounded-lg w-full max-w-xs h-20 flex items-center justify-center">
-                  <p className="text-gray-500 text-center text-xs">Your Company Here</p>
-                </div>
-                <div className="bg-gray-100 p-4 rounded-lg w-full max-w-xs h-20 flex items-center justify-center">
-                  <p className="text-gray-500 text-center text-xs">Your Company Here</p>
-                </div>
-                <div className="bg-gray-100 p-4 rounded-lg w-full max-w-xs h-20 flex items-center justify-center">
-                  <p className="text-gray-500 text-center text-xs">Your Company Here</p>
-                </div>
-                <div className="bg-gray-100 p-4 rounded-lg w-full max-w-xs h-20 flex items-center justify-center">
-                  <p className="text-gray-500 text-center text-xs">Your Company Here</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Sponsor CTA */}
-          <div className="text-center mt-12 p-8 bg-[#F9FAFE] rounded-lg">
-            <h3 className="text-xl font-bold mb-4">Interested in Sponsoring?</h3>
-            <p className="text-gray-600 mb-6">
-              Join us in supporting the next generation of developers and open source contributors.
-            </p>
-            <a 
-              href="mailto:sponsors@ufosc.org" 
-              className="inline-block bg-[#1C2646] text-white py-3 px-8 rounded-md font-medium hover:bg-[#0f1a2e] transition-colors"
-            >
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Registration Section */}
-      <section id="registration" className="py-16 px-4 bg-[#F9FAFE]">
+{/* Registration Section */}
+<section id="registration" className="py-16 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-center mb-12">Register for Minihack</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -478,6 +389,8 @@ export default function Home() {
                   <option value="sophomore">Sophomore</option>
                   <option value="junior">Junior</option>
                   <option value="senior">Senior</option>
+                  <option value="graduate">Graduate</option>
+
                 </select>
               </div>
               <div>
@@ -545,11 +458,105 @@ export default function Home() {
               disabled={submitting}
               className="w-full bg-[#1C2646] text-white py-3 px-6 rounded-md font-medium hover:bg-[#0f1a2e] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {submitting ? 'Submitting…' : 'Register for Minihack'}
+              {submitting ? 'Submitting…' : 'Register'}
             </button>
           </form>
         </div>
       </section>
+
+ {/* Sponsors Section */}
+ <section id="sponsors" className="py-16 px-4 bg-[#F9FAFE]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-center mb-12">Our Sponsors</h2>
+          <div className="text-center mb-8">
+            <p className="text-lg text-gray-600 mb-8">
+              Thank you to our amazing sponsors who are making the OSC Minihack possible!
+            </p>
+          </div>
+          
+    {/* Sponsor Tiers */}
+          <div className="space-y-16">
+            {/* Corporate Sponsors */}
+            <div>
+              <h3 className="text-center text-2xl font-bold mb-8 text-gray-600">Corporate Sponsors</h3>
+              <div className="flex flex-wrap justify-center items-center gap-12">
+                {/* Astera Labs Logo */}
+                <a 
+                  href="https://www.asteralabs.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="block p-4 transition-transform hover:scale-105"
+                >
+                  <img 
+                    src="/sponsors/logo__astera-labs-colored.svg" 
+                    alt="Astera Labs Logo" 
+                    className="h-24 object-contain"
+                  />
+                </a>
+
+                {/* Andor Health Logo */}
+                <a 
+                  href="https://www.andorhealth.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="block p-4 transition-transform hover:scale-105"
+                >
+                  <img 
+                    src="/sponsors/logo-andor-health.svg" 
+                    alt="Andor Health Logo" 
+                    className="h-24 object-contain"
+                  />
+                </a>
+              </div>
+            </div>
+
+            {/* Food Sponsors */}
+            <div>
+              <h3 className="text-center text-xl font-bold mb-8 text-yellow-600">Food Sponsors</h3>
+              <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+                <a href="https://www.celsius.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
+                  <img src="/sponsors/logo-celsius.svg" alt="Celsius Logo" className="h-16 object-contain"/>
+                </a>
+                <a href="https://www.dominos.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
+                  <img src="/sponsors/logo-dominos.svg" alt="Domino's Pizza Logo" className="h-16 object-contain"/>
+                </a>
+                <a href="https://www.piesanostogo.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
+                  <img src="/sponsors/piesanos-logo.svg" alt="Piesanos Stone Fired Pizza Logo" className="h-16 object-contain"/>
+                </a>
+                 <a href="https://www.publix.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
+                  <img src="/sponsors/publix-logo.svg" alt="Publix Logo" className="h-16 object-contain"/>
+                </a>
+              </div>
+            </div>
+
+            {/* Club Sponsors */}
+            <div>
+              <h3 className="text-center text-lg font-bold mb-8 text-gray-500">Club Sponsors</h3>
+              <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6">
+                 <a href="https://uf-acm.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
+                  <img src="/sponsors/uf-acm-logo.svg" alt="UF ACM Logo" className="h-12 object-contain"/>
+                </a>
+                 <a href="https://ufswe.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
+                  <img src="/sponsors/uf-swe-logo.svg" alt="UF Society of Women Engineers Logo" className="h-12 object-contain"/>
+                </a>
+                 <a href="https://gatortechuf.com/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
+                  <img src="/sponsors/gator-tech-logo.svg" alt="GatorTech Logo" className="h-12 object-contain"/>
+                </a>
+                 <a href="https://ufgdc.org/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
+                  <img src="/sponsors/uf-gdc-logo.svg" alt="UF Game Developers Coalition Logo" className="h-12 object-contain"/>
+                </a>
+                <a href="https://www.facebook.com/ieee.uf/" target="_blank" rel="noopener noreferrer" className="block p-2 transition-transform hover:scale-105">
+                  <img src="/sponsors/uf-ieee-logo.svg" alt="UF IEEE Logo" className="h-12 object-contain"/>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Sponsor CTA */}
+        </div>
+      </section>
+
+      
 
       {/* Footer */}
       <footer className="py-8 px-4 bg-[#1C2646] text-white text-center">
